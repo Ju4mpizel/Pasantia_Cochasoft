@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        var hola = "Hola Mundo"
+        let hello = "Hellos World"
+        console.log(hola)
+        console.log(hello)
+        console.log("********************var*************************")
+        //Var no actua dentro de bloques siempre se va arriba, a la variable global
+        var musica = "Rock"
+        console.log("Variable musica antes del bloque", musica)
+        //var musica = "Pop"
+        {
+            var musica = "Pop" //Esta variable se sale del bloque
+            console.log("Variable musica dentro del bloque", musica)
+        }
+        //Entonces este nunca vuelve a Rock
+        console.log("Variable musica despues del bloque", musica)
+
+        console.log("********************let*************************")
+        //Let si actua dentro de bloques manteniendo el valor cambiado unicamente dentro del bloque
+        let musica2 = "Rock"
+        console.log("Variable musica antes del bloque", musica2)
+        //var musica = "Pop"
+        {
+            let musica2 = "Pop" //Unicamente se cambia dentro del bloque
+            console.log("Variable musica dentro del bloque", musica2)
+        }
+        //Esto vuelve a la normalidad osea a Rock
+        console.log("Variable musica despues del bloque", musica2)
+    </script>
+</html>
