@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        function unaFuncionQueDevuelveValor(){
+            console.log("Uno")
+            return 19;
+            return "Esta es una cadena que devuelve la funcion"
+        }
+        let valorDeFuncion = unaFuncionQueDevuelveValor()
+        console.log(valorDeFuncion)
+
+        function saludar(nombre, edad){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`)
+        }
+
+        saludar("Juan Pablo Zelada Salinas", 23)
+
+        //Funciones declaradas
+        funcionDeclarada()
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada")
+        }
+
+        //Funcion anonima
+        const funcionExpresada = function(){
+            console.log("Esto es una funcion anonima que no se puede expresar antes de ser inicializada")
+        }
+
+        //Una funcion expresada o asignada a un valor no se puede iniciar antes de que esta sea iniciada
+        //Una funcion declarada si puede ser iniciada antes de que esta se inicie
+    </script>
+</body>
+</html>

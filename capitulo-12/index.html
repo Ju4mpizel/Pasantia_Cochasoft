@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        //Dentro de un objetos las variables se les llama atributos/propiedades y a las funciones se les llama metodos
+        const JuanPablo = {
+            nombre:"Juan Pablo Zelada Salinas",
+            edad: 23,
+            pasatiempos: ["Programar", "Jugar", "Estudiar", "Salir", "Leer"],
+            saludar: function(){
+                console.log("Hola")
+            }
+        }
+        console.log(JuanPablo["nombre"])
+        console.log(JuanPablo.nombre)
+        console.log(JuanPablo.pasatiempos[1])
+        JuanPablo.saludar()
+
+        //Imprime todos los atributos que puede tener el objeto
+        console.log(Object.keys(JuanPablo))
+        //Lo mismo pero imprime los valores de cada key
+        console.log(Object.values(JuanPablo))
+
+    </script>
+</body>
+</html>
