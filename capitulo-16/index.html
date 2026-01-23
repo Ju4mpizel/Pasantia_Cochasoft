@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        //Se utiliza a la hora de querer evaluar si es que hay un error en el codigo
+        //Este tiene que estar siempre adentro del trycatch sino el error aparecera afuera
+        try{
+            consol.log("En el try se agrega el codigo a evaluar")
+            noExiste; //Aqui ya detecta el error y no va al mensaje de aqui abajo
+            console.log("Este es el segundo mensaje del try")
+        }catch(error){
+            console.log("Catch captura cualquier errror surgido en el try")
+        }finally{
+            console.log("Finalmente el bloque finally se ejecutara siempre al final de un bloque try/catch")
+        }//Finally no se usa mucho
+
+        try{
+            let numero = 10;
+            if(isNaN(numero)){
+                throw new Error("El caracter ingresado no es un numero")
+            }
+            console.log(numero+numero)
+        }catch(error){
+            consol.log(`Se produjo el siguiente error: ${error}`)
+        }
+    </script>
+</body>
+</html>

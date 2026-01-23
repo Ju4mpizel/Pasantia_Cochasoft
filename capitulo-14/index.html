@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        let edad = 18
+        if(edad >= 18){
+            console.log("Eres mayor de edad")
+        }else{
+            console.log("Eres menor de edad")
+        }
+        //Existen condicionales con operadores que excluyen e incluyen algunas respuestas
+        //Operador ternario, es la simplificacion de un if/else en una sola linea de codigo
+        //(Condicion) ? verdadero:falsa
+        console.log("Operador Ternario")
+        let eresMayor = (edad >= 18) ? "Eres mayor de edad":"Eres menor de edad"
+        //Forma mas organizada para evitar confusiones
+        let eresMayor2 = (edad >= 18) 
+        ? "Eres mayor de edad"
+        :"Eres menor de edad"
+        console.log(eresMayor)
+        let valor = 1
+        switch(valor){
+            case 1:
+                console.log("Este es el caso 1")
+                break;
+            default:
+                console.log("Esta es una respuesta predeterminada")
+                break;
+            
+        }
+    </script>
+</body>
+</html>
