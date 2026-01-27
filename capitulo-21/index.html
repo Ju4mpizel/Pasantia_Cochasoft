@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+
+        //Es una funcion mas simplificada
+
+        //Cuando no recibe parametros o tiene mas parametros se pone si o si parentesis vacios
+        const saludar = () => {
+            console.log("Hola")
+        }
+
+        //Cuando recibe parametros ya no se pone parentesis o no es necesario
+        const saludar2 = nombre => console.log(`Hola ${nombre}`)
+
+        saludar2("Juan Pablo")
+        //Nos ahorramos el function y el return ya que lo tiene implicitamente
+        const sumar = function(a,b){
+            return a + b
+        }
+
+        console.log(sumar(8,9))
+
+        const sumar2 = (a,b) => a+b
+        console.log(sumar2(2,2))
+
+        //Cuando es una funcion de varias lineas si o si se tiene que poner dentro de llaves
+        const funcionVariasLineas = () => {
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+        funcionVariasLineas()
+
+        const numeros = [1,2,3,4,5]
+
+        numeros.forEach((elemento,index) => {
+            console.log(`${elemento} esta en la posicion ${index}`)
+        })
+
+
+        //Si se puede no usar arrow functions en objetos ya que estos
+        //hacen referencia al objeto donde fue declarado el objeto y no al objeto
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        //Sin desctructuracion
+        const numeros = [1,2,3]
+        let uno = numeros[0],
+        dos = numeros[1],
+        tres = numeros [2]
+
+        //Con destructuracion
+        const [one, two, tree] = numeros
+        console.log(one,two,three)
+
+        let persona = {
+            nombre: "Juan Pablo",
+            apellido: "Zelada Salinas",
+            edad: 23
+        }
+
+        let{nombre, apellido, edad} = persona
+        console.log(nombre, apellido, edad)
+    </script>
+</body>
+</html>
