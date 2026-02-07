@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+
+        //Se crea la clase padre Animal
+        class Animal {
+            constructor(nombre,genero){
+                this.nombre = nombre
+                this.genero = genero
+            }
+            sonar(){
+                console.log("Hago sonidos por que estoy vivo")
+            }
+            saludar(){
+                console.log(`Hola me llamo ${this.nombre}`)
+            }
+        }
+
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio){
+                //Se llama al contstructor de la clase padre osea animal
+                super(nombre, genero)
+                this.tamanio = tamanio
+            }
+
+            sonar(){
+                console.log("Soy un perro y mi sonido es un ladrido")
+            }
+            ladrar(){
+                console.log("Guauu Guauuu")
+            }
+        }
+
+        const mimi = new Animal("Mimi", "Hembra"),
+        scooby = new Perro("Scooby", "Macho", "Gigante")
+        mimi.saludar()
+        mimi.sonar()
+        scooby.saludar()
+        scooby.sonar()
+        scooby.ladrar()
+
+        console.log(console)
+        console.error("Esto es un error")
+        console.warn("Esto es un aviso")
+        console.info("Esto es un mensaje informativo")
+        console.log("Un registro de lo que ha pasado en nuestra aplicacion")
+
+        let nombre = "Juan",
+        apellido = "Zelada",
+        edad = 24
+
+        console.log(nombre)
+        console.log(apellido)
+        console.log(edad)
+        console.log(nombre, apellido, edad)
+        console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`)
+
+        //%string %digit
+        console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre, apellido, edad)
+        //Limpia la consola
+        //console.clear()
+
+        console.log(window)
+        //DOM Document Object Model
+        //Este muestra todo el contenido del HTML asi que no funciona el log para mostrar propiedades
+        console.log(document)
+        //dir muestra propiedades objetos
+        console.dir(window)
+        console.dir(document)
+
+
+        console.group("Cursos de @jonmircha en Youtube")
+        console.log("Curso de Javascript")
+        console.log("Curso de Node.js")
+        console.groupEnd()
+    </script>
+</body>
+</html>

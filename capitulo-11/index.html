@@ -10,14 +10,14 @@
     <script>
         //Se puede iniciar un arreglo con let o const ya que este es considerado un objeto
         const a = []
-        const b = [1, true, "Hola", [A,B,C,D]]
+        const b = [1, true, "Hola", ["A","B","C","D"]]
         console.log(b[2])
         console.log(b[3][2])
 
         const c = Array.of(1,2,3,4)
         console.log(c)
         const d = Array(100).fill(false)
-
+        console.log(d)
         const colores = ["Rojo", "Amarillo", "Azul"]
         colores.push("Negro")
         colores.pop()
