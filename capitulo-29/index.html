@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        function saludar(nombre){
+            nombre = nombre || "Desconocido"
+            console.log(`Hola ${nombre}`)
+        }
+
+        saludar("Jon")
+        saludar()
+
+
+        console.log("cadena" || "Valor de la derecha")
+        console.log("valor izquierdo" && "Valor de la derecha")
+    </script>
+</body>
+</html>
