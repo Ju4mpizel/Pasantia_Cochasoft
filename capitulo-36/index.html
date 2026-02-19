@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios</title>
+  </head>
+  <body>
+    <h1>Ejercicios parte 1</h1>
+    <script>
+              //Ejercicio 5
+              const invertirCadena = (cadena = "") =>
+              (!cadena) ? (Console.console.warn("No ingresaste una cadena de texto")) :
+              (console.info(cadena.split("").reverse().join("")))
+              invertirCadena()
+              invertirCadena("Hola Mundo")
+              //Ejercicio 6
+              const contarConIndexOf = (texto = "", palabra = "") => {
+          if (!texto || !palabra) return 0;
+
+          let contador = 0;
+          let posicion = texto.indexOf(palabra); // Buscamos la primera vez
+
+          // Mientras el resultado de indexOf no sea -1 (que significa "no encontrado")
+          while (posicion !== -1) {
+              contador++; // Encontramos una, aumentamos el contador
+
+              // Buscamos la siguiente, pero empezamos DESPUÉS de donde encontramos la anterior
+              posicion = texto.indexOf(palabra, posicion + 1);
+          }
+
+          return contador;
+      };
+
+      const frase = "Hola mundo como estas mundo querido mundo";
+      console.log(contarConIndexOf(frase, "mundo"));
+              //Ejercicio 7
+              const palindromo = (palabra = "")=>{
+              if(!palabra) return console.warn("No ingresaste ninguna frase")
+
+              palabra = palabra.toLowerCase()
+              let alReves = palabra.split("").reverse().join("")
+              return(palabra === alReves) ? console.info("Si es palindromo") : console.info("No es palindromo")
+              }
+    </script>
+  </body>
+</html>

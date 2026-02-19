@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos Javascript</h1>
+    <script>
+        console.log(Date())
+
+        let fecha = new Date()
+        console.log(fecha)
+        //Día del Mes
+        console.log(fecha.getDate())
+        //Numero del dia de la semana del 0-6
+        console.log(fecha.getDay())
+        //Obtener numero de mes 0-11
+        console.log(fecha.getMonth())
+        //Obtener año
+        console.log(fecha.getFullYear())
+        //Obtener hora
+        console.log(fecha.getHours())
+        //Obtener minutos
+        console.log(fecha.getMinutes())
+        //Obtener segundos
+        console.log(fecha.getSeconds())
+        //Obtener Milisegundos
+        console.log(fecha.getMilliseconds())
+        //Darlo como fecha literal
+        console.log(fecha.toString())
+        //Solo la fecha
+        console.log(fecha.toDateString())
+        //Fecha clasica
+        console.log(fecha.toLocaleString())
+        //TimeStamp cuando tiempo ha pasado desde el año 0
+        console.log(Date.now())
+
+        let cumpleJuampi = new Date(2002,6,3)
+        console.log(cumpleJuampi)
+    </script>
+</body>
+</html>

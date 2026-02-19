@@ -1,0 +1,2 @@
+//EN CASO DE UTILIZAR ALGUN NAVEGADOR ANTIGUO QUE NO SOPORTE EGMA SCRIPT 6
+console.log("Mi navegador no soporta modulos +ES6")

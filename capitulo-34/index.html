@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h1>Ejercicios parte 1</h1>
+    <script>
+        //Ejercicio 1
+        let cadena = "Hola Mundo"
+        function miFuncion(cadena){
+            return cadena.length
+        }
+        console.log(miFuncion(cadena))
+        //Ejercicio 2
+        let cadena2 = "Hola Mundo"
+        console.log(cadena2.slice(0,4))
+
+        
+        function funcionRepetir(cadena, repeticiones){
+            let repetirResultado = ""
+            for(let i = 0; i < repeticiones; i++){
+                repetirResultado += cadena + " "
+            }
+            return repetirResultado
+        }
+        console.log(funcionRepetir("Hola Mundo", 3))
+        //Funcion Existente
+        const repetirTexto = (cadena, veces) => cadena.repeat(veces);
+        console.log(repetirTexto("Hola Mundo ", 3));
+    </script>
+</body>
+</html>
