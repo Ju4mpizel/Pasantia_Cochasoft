@@ -16,11 +16,31 @@ let promesa = new Promise((Response, reject) => {
     reject("Fallo");
   }, 3000);
 });
+//Como verificar la promesa
+promesa
+  .then((res) => {
+    console.log(res.description);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+// Definicion de varias promesas
+let promesa1 = new Promise((Response, reject) => {
+  setTimeout(() => {
+    let resp = {
+      Response: 200,
+      description: "Esta respuesta es promesa 1",
+    };
+    Response(resp);
+    reject("Fallo");
+  }, 5000);
+});
 let promesa2 = new Promise((Response, reject) => {
   setTimeout(() => {
     let resp = {
       Response: 200,
-      description: "Esta respuesta es mas lenta",
+      description: "Esta respuesta es mas lenta promesa 2",
     };
     Response(resp);
     reject("Fallo");
@@ -30,22 +50,14 @@ let promesa3 = new Promise((Response, reject) => {
   setTimeout(() => {
     let resp = {
       Response: 200,
-      description: "Esta es la mas rapida",
+      description: "Esta es la mas rapida promesa 3",
     };
     Response(resp);
     reject("Fallo");
   }, 2500);
 });
-
-promesa
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
-promesa
+// Mala practica de correr promesas
+promesa1
   .then((res) => {
     console.log(res.description);
     promesa2
